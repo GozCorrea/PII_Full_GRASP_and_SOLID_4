@@ -15,13 +15,13 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        // Entendemos que Recipe contiene objetos del tipo step, por lo cual, por patron Creator, deberia de crearlos 
+        // Entendemos que Recipe contiene objetos del tipo step, por lo cual, por patron Creator, deberia de crearlos
+        //Segun creator, si un objeto B (Recipe) contiene objetos del tipo A (step), B deberia de encargar de crear las instancias de A. 
         
-        public Step AddStep(Product input, double quantity, Equipment equipment, int time)
+        public void AddStep(Product input, double quantity, Equipment equipment, int time)
         {
             Step step = new Step (input, quantity, equipment,time);
             this.steps.Add(step);
-            return step;
         }
 
         public void RemoveStep(Step step)
