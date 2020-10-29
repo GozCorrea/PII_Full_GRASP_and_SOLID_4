@@ -42,6 +42,8 @@ namespace Full_GRASP_And_SOLID
             AddEquipmentToCatalog("Hervidor", 2000);
         }
 
+        // No modificamos en como se instancian los objetos productos y equipamientos, debido a que como está el
+        //codigo acutalmente, no hay un objeto B que contenga a A. En este caso es una lista que contiene a Productos y Equipamiento
         private static void AddProductToCatalog(string description, double unitCost)
         {
             productCatalog.Add(new Product(description, unitCost));
